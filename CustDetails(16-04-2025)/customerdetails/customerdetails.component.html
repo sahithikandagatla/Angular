@@ -1,0 +1,50 @@
+<div class="container-fluid homeCss">
+    <div class="visitorsCss">
+        <table class="table tab">
+            <thead>
+                <tr>
+                    <th>Visitors Id</th>
+                    <th>Visitors Name</th>
+                    <th>Host name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>Mary</td>
+                    <td>john</td>
+                    <td><button class="btn btn-link">Delete</button></td>
+                </tr>
+                <tr *ngFor="let i of CustDetails; let indx = index">
+                    <td>{{ i.CustomerId }}</td>
+                    <td>{{ i.CustomerName }}</td>
+                    <td>{{ i.CustomerHost }}</td>
+                    <td>
+                      <button class="btn btn-link" (click)="RemoveItem(indx)">Delete</button>
+                    </td>
+                  </tr>
+                  
+            </tbody>
+        </table>
+    </div>
+    <div class="addVisitorsCss">
+        <form>
+            <div>
+                <label class="form-control">Visitors Id:</label>
+                <input type="text" class="form-control" [(ngModel)]="visitId" name="visitId" />
+            </div>
+            <div class="form-group">
+                <label class="form-control">Visitors Name:</label>
+                <input type="text" class="form-control" [(ngModel)]="visitName" name="visitName" />
+            </div>
+            <div class="form-group">
+                <label class="form-control">Host Name:</label>
+                <input type="text" class="form-control" [(ngModel)]="visitHost" name="visitHost" />
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary form-control" (click)="AddNewCust()">Save Visitors</button>
+            </div>
+        </form>
+    </div>
+</div>
