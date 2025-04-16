@@ -1,0 +1,12 @@
+.headerCss
+{
+    height: 100px;
+    background-color:rgb(80, 80, 128);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+    color: antiquewhite;
+}

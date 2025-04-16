@@ -1,0 +1,10 @@
+.addVisitorsCss{
+    height:400px;
+    background-color: rgb(147, 184, 147);
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.addVisitorsCss div{
+    padding-bottom: 3px;
+}

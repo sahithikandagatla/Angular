@@ -1,0 +1,9 @@
+.navCss{
+    height:600px;
+    background-color: rgb(153, 93, 93);
+    padding: 50px;
+}
+a{
+    color: aliceblue;
+    text-decoration: none;
+}

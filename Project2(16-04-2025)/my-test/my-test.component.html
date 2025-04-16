@@ -1,0 +1,15 @@
+<div *ngIf="ShowDiv"><!-- structure directive  -->
+    Here is my text...
+</div>
+<button (click)="ToggleDiv()">Toggle Text</button>
+<!-- <div *ngFor="let pm of India_PMList;let idx=index">{{idx+1}}-{{pm}}</div> -->
+<ol>
+    <li *ngFor="let pm of India_PMList;let indx=index" type="a">
+        <div>{{pm}}<button class="btn btn-link" (click)="RemoveItem(indx)">delete</button></div>
+    </li>
+</ol>
+<form>
+    <input type="text" name="pmname" [(ngModel)]="newPMName"/>
+    <button (click)="AddNewEntry()">Add New Entry</button>
+    <div *ngIf="isPresent">Already exists try another entry</div>
+</form>
