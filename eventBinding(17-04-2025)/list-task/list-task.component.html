@@ -1,0 +1,15 @@
+<h3>PARENT TO CHILD(Property Binding)</h3>
+<table style="width:100%">
+    <tr>
+        <th>Task Id</th>
+        <th>Task Title</th>
+        <th>Task Duration</th>
+        <th>Task Status</th>
+    </tr>
+    <tr *ngFor="let i of TaskData">
+        <td>{{i.taskId}}</td>
+        <td>{{i.taskTitle}}</td>
+        <td>{{i.taskDuration}}</td>
+        <td>{{i.taskStatus}}</td>
+    </tr>
+</table>

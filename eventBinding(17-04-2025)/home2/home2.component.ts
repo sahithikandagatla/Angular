@@ -1,0 +1,19 @@
+import { Component } from '@angular/core';
+import { TaskInfo } from '../task-info';
+
+@Component({
+  selector: 'app-home2',
+  templateUrl: './home2.component.html',
+  styleUrls: ['./home2.component.css']
+})
+export class Home2Component {
+  taskId:number=0
+  taskTitle:string=""
+  taskDuration:number=0
+  taskStatus:string=""
+  TaskListArray:TaskInfo[]=[]
+  AddTaskData()
+  {
+    this.TaskListArray.push({taskId:this.taskId,taskTitle:this.taskTitle,taskDuration:this.taskDuration,taskStatus:this.taskStatus})
+  }
+}
