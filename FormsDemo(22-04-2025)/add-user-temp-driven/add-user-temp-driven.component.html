@@ -1,0 +1,14 @@
+<h1>Add User</h1>
+<form #frm="ngForm" (ngSubmit)="AddNewUser(frm.value)">
+    <input type="text" name="userId" [(ngModel)]="userData.userId" placeholder="enter userId" required #frmuserid="ngModel"/><br>
+    <div *ngIf="!frmuserid.valid && frmuserid.touched">you must enter userId because it is mandatory</div>
+    <input type="text" name="userName" [(ngModel)]="userData.userName" placeholder="enter username" required/><br>
+    <input type="text" name="useremail" [(ngModel)]="userData.email" placeholder="enter email" required/><br>
+    <input type="password" name="password" [(ngModel)]="userData.password" placeholder="enter password" required/><br>
+    <select name="role" [(ngModel)]="userData.role" required>
+        <option value="1">Admin</option>
+        <option value="2">Owner</option>
+        <option value="3">User</option>
+    </select><br>
+    <button type="submit" [disabled]="!frm.valid">AddUser</button>
+</form>

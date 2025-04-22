@@ -1,0 +1,22 @@
+<!-- <app-add-user-temp-driven></app-add-user-temp-driven> -->
+<table class="table table-striped table-hover">
+    <thead>
+        <th>userId</th>
+        <th>userName</th>
+        <th>email</th>
+        <th>password</th>
+        <th>role</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of userArray">
+            <td>{{i.userId}}</td>
+            <td>{{i.userName}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.password}}</td>
+            <td>{{i.role}}</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<hr>
+<app-add-user-react-driven (OnAddNewUser)="OnNewUserAdd($event)"></app-add-user-react-driven>

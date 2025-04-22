@@ -1,0 +1,13 @@
+<form [formGroup]="myfrm" (ngSubmit)="AddNewUser()">
+    <input type="text" formControlName="userId" placeholder="enter userId"/>
+    <span *ngIf="IsControlNotValid('userId')">userId required</span>
+    <br><input type="text" formControlName="userName" placeholder="enter username"/><br>
+    <input type="email" formControlName="email" placeholder="enter email"/><br>
+    <input type="password" formControlName="password" placeholder="enter password"/><br>
+    <select formControlName="role">
+        <option value="1">Admin</option>
+        <option value="2">Owner</option>
+        <option value="3">User</option>
+    </select><br>
+    <button type="submit" [disabled]="!IsFormValid()">AddUser</button>
+</form>
