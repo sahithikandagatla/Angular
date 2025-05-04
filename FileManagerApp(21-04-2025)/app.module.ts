@@ -41,7 +41,7 @@ const UrlInfoData:UrlInfo=
     //   provide:DataProviderServiceService,useClass:DBDataProviderService
     // },
     // {
-    //   provide:DataProviderServiceService,useClass:CloudDataProviderService
+    //   provide:DataProviderServiceService,useClass:CloudDataProviderService//the most recenty service will get override
     // }
     // {
     //   provide:DataProviderServiceService,useFactory:DataServiceFactoryFunction(1)
